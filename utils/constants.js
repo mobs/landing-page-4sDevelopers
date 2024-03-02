@@ -1,38 +1,54 @@
 import { GiAquarium } from "react-icons/gi";
 import { SiClubhouse } from "react-icons/si";
 
-export const cardItems = [
+export const companyName = "4S Developers";
+export const companyAddress = "Sector 59: Gurugram"
+
+export const pricingDetails = [
+
+];
+
+export const about = [
+  "Welcome to the pinnacle of luxurious living in Gurgaon. 4S Developers introduces its flagship project in Sector 59, a testament to modern housing blended with indulgent living.",
+  "Our projects, nestled in the vibrant Millennium City, are the epitome of luxury and eco-friendly living, designed for those who seek an exclusive lifestyle."
+];
+
+export const amenitiesData = [
+  'An opulent way of life stems from a home that’s aesthetically pleasing and makes you feel welcomed. Our Project Tulip Monsella is located in Sec-53, Golf course road, Gurgaon amidst lush greenery and is crafted to offer residents a lifestyle that transcends ordinary. We offer a blend of modern apartments and penthouses that redefine elegance and comfort for our residents. Our array of plush amenities are here to cater to your refined taste.'
+];
+
+export const amenities = [
   {
     title: "Aqua Theme",
-    icon: <GiAquarium className="text-center text-4xl ml-24" />,
+    icon: ''
   },
   {
     title: "Luxury Clubhouse",
-    icon: <SiClubhouse />,
+    icon: ''
   },
   {
     title: "Modular Kitchen",
-    icon: "as",
+    icon: "",
   },
   {
     title: "Tiles in Living & Dining Areas",
-    icon: "as",
+    icon: "",
   },
   {
     title: "Rooftop Jogging Track & Swimming Pool",
-    icon: "as",
+    icon: "",
   },
   {
     title: "Yoga Studio & Pool-side Deck",
-    icon: "as",
+    icon: "",
   },
   {
     title: "Podium-Level Clubhouse",
-    icon: "as",
+    icon: "",
   },
   {
     title: "Aerobics Court & Landscaped Drop-off Points",
-    icon: "as",
+    icon: "",
   },
 ];
 
@@ -68,4 +84,12 @@ export const navbarData = [
     name: "Location",
     link: "",
   },
+];
+
+export const highlights = [
+  "4 Residences per Floor for Unmatched Privacy",
+  "Italian Marble and Wooden Flooring",
+  "Exclusive 3BR and 4BR Layouts with Servant Quarters",
+  "Landscape Elements Inspired by Singapore",
+  "Comprehensive Security with CCTV Surveillance"
 ];

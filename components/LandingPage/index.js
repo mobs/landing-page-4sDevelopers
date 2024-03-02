@@ -2,25 +2,18 @@ import React from "react";
 import Form from "../Form";
 import Card from "../Card";
 import { IoMdCheckmarkCircle } from "react-icons/io";
-import { cardItems, locationAdvantages } from "@/utils/constants";
+import { amenities, companyAddress, companyName, highlights, locationAdvantages } from "@/utils/constants";
 
 
 const LandingPage = () => {
-  const listItems = [
-    "4 Residences per Floor for Unmatched Privacy",
-    "Italian Marble and Wooden Flooring",
-    "Exclusive 3BR and 4BR Layouts with Servant Quarters",
-    "Landscape Elements Inspired by Singapore",
-    "Comprehensive Security with CCTV Surveillance"
-  ];
 
   return (
     <div className="flex flex-col gap-16">
       <div className="md:flex lg:flex-row flex-col top-24 pb-8" id="home">
         <img src="/bg.jpg" className="absolute w-[100%] h-[850px]"/>
         <div className="flex flex-col gap-2 lg:w-1/2 w-screen md:m-16 lg:mt-48 z-20 text-white justify-center">
-            <p className="z-10 font-bold md:text-5xl text-2xl font-serif lg:block flex justify-center lg:mt-0 mt-4"> 4S Developers </p>
-            <p className="z-10 font-bold md:text-3xl text-lg font-serif lg:block flex justify-center"> At Sector 59: Gurugram </p>
+            <p className="z-10 font-bold md:text-5xl text-2xl font-serif lg:block flex justify-center lg:mt-0 mt-4">{companyName}</p>
+            <p className="z-10 font-bold md:text-3xl text-lg font-serif lg:block flex justify-center"> At {companyAddress} </p>
             <div className="bg-white z-10 mt-8 md:text-2xl text-base font-semibold text-slate-700 p-4 rounded-bl-xl rounded-tr-xl w-3/4 lg:ml-0 ml-12">
                 <p> Starting Price @Rs. 3.99 Cr* Onwards </p>
                 <p> Super Area: 3395 sq.ft. </p>
@@ -43,7 +36,7 @@ const LandingPage = () => {
       <div className="lg:mt-[18rem]" id='about us'>
         <p className="font-serif text-center md:text-4xl text-2xl underline underline-offset-8 decoration-slate-500 text-slate-700 ">
           {" "}
-          About 4S Developers{" "}
+          About {companyName}{" "}
         </p>
         <div className="flex md:ml-12 md:mr-12 ml-4 mr-4">
           <div className="mt-16 flex gap-24">
@@ -70,7 +63,7 @@ const LandingPage = () => {
 
           <div>
             <ul className="flex flex-col gap-4">
-              {listItems.map((item) => (
+              {highlights.map((item) => (
                 <li className="flex gap-4"> 
                     <span className="text-2xl text-slate-700"><IoMdCheckmarkCircle /></span>
                     <span className="text-lg">{item}</span>
@@ -93,7 +86,7 @@ const LandingPage = () => {
       <div className="flex flex-col md:m-16 m-4 gap-8 text-center" id="amenities">
         <p className="flex flex-col gap-1 font-semibold md:text-3xl text-xl font-serif">
           {" "}
-          <span className="text-slate-700"> 4S Developers: Sector 59, Gurugram </span>
+          <span className="text-slate-700"> {companyName}: {companyAddress} </span>
           <span className="underline underline-offset-8 decoration-slate-500 text-slate-700 ">Exclusive Amenities</span>
         </p>
         <p className="md:ml-24 md:mr-24 ml-4 mr-4 md:text-xl text-base text-gray-700">
@@ -106,7 +99,7 @@ const LandingPage = () => {
           cater to your refined taste.
         </p>
         <div className="grid md:grid-cols-4 grid-cols-1 gap-4">
-          {cardItems.map((item) => (
+          {amenities.map((item) => (
             <div className="">
               <Card item={item} />
             </div>
