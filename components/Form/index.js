@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react'
-import { Button, Label, TextInput } from 'flowbite-react';
+import { TextInput } from 'flowbite-react';
 import { useRouter } from 'next/navigation';
+import { POST } from '@/services/APIService';
 
 
 const Form = ({buttonClasses=''}) => {
@@ -10,10 +11,15 @@ const Form = ({buttonClasses=''}) => {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("")
 
-    const router = useRouter()
+    const router = useRouter();
 
     const handleSubmit = (e) => {
       e.preventDefault();
+      POST('https://o4nzozyh09.execute-api.ap-south-1.amazonaws.com/googleWebhooks?pid=65e57083387d44b8b8fdd26b&clid=65b79f31b2996953a6fda921',{email, phone, name, message})
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => console.log(error.message));
 
       router.push('/thankYou')
     }

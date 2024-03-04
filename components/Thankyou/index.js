@@ -6,7 +6,7 @@ const ThankyouComponent = () => {
     <div className='flex flex-col items-center gap-4'>
         <div className='flex flex-col gap-6'>
             <img src='/logo.png' />
-            <span className='font-extrabold font-mono text-blue-900 text-7xl ml-52'> Developers </span>
+            <span className='font-extrabold font-mono text-blue-900 text-7xl ml-40'> Developers </span>
         </div>
 
         <div className='text-6xl font-extrabold font-mono'>
