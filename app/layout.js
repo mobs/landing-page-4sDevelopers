@@ -2,6 +2,8 @@ import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
+import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
@@ -21,6 +23,14 @@ export default function RootLayout({ children }) {
           <Navbar />
         </div>
           <div className=""> {children} </div>
+        <div className="fixed md:bottom-16 bottom-[14rem] md:right-16 right-[2rem] flex flex-col gap-8 z-40">
+        <Link href={`tel:918826677393`}>
+          <FaPhone className="text-3xl text-blue-600" />
+        </Link>
+        <Link href={`https://api.whatsapp.com/send?phone=918826677393`}>
+          <FaWhatsapp className="text-3xl text-green-700"/>
+        </Link>
+        </div>
         <div>
           <Footer /> 
         </div>

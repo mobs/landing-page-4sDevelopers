@@ -18,12 +18,13 @@ const FloorPlan = () => {
                     <td className='border-2 p-4'>{data.type}</td>
                     <td className='border-2 p-4'>{data.area}</td>
                     <td className='border- p-4 flex gap-8'> 
-                    <Link href={`tel: ${data.number}`} target='_blank' className='flex gap-4'>
+                    {data.price}
+                    {/* <Link href={`tel: ${data.number}`} target='_blank' className='flex gap-4'>
                         <FaPhone className='text-blue-600' />   
                     </Link>
                     <Link href={`https://api.whatsapp.com/send?phone=${data.number}`} >
                         <FaWhatsapp className='text-green-600 text-xl' />
-                    </Link>
+                    </Link> */}
                     </td>
                 </tr>
             ))}

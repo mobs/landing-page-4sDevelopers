@@ -29,11 +29,9 @@ const LandingPage = () => {
             <p> Starting Price @Rs. 3.99 Cr* Onwards + PLC + GST </p>
             <p> Area - 3 BHK: 2200-2500 sq.ft. + Servant </p>
             <p> Area - 4 BHK: 3100-3400 sq.ft. + Servant </p> 
-            {/* <p> Carpet Area: 1855 sq. ft. </p> */}
-            {/* <p> Balcony Area: 392 sq. ft. </p> */}
           </div>
 
-          <div className="lg:hidden w-3/4 mt-16 z-20 block lg:ml-0 ml-12 ">
+          <div className="lg:hidden w-3/4 mt-16 z-10 block lg:ml-0 ml-12 ">
             <Form />
           </div>
         </div>
@@ -186,7 +184,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="fixed top-[39.5rem] md:hidden block">
+      <div className="fixed top-[39.5rem] md:hidden block z-40">
         <ConnectButton />
       </div>
     </div>

@@ -98,11 +98,13 @@ export const tableData = [
   {
     type: '3 BHK',
     area: '2200 - 2500 Sq.ft. + Servant',
-    number: '918826677393'
+    price: 'Call for price'
+    // number: '918826677393'
   },
   {
     type: '4 BHK',
     area: '3100 - 3400 Sq.ft. + Servant',
-    number: '918826677393'
+    price: 'Call for price'
+    // number: '918826677393'
   },
 ]

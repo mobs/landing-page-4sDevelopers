@@ -2,6 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Textarea } from 'flowbite-react'
 import { Fragment, useState } from 'react'
 import Form from '../Form'
+import { RxCross1 } from 'react-icons/rx'
 
 export default function ModalComponent({modalText, setOpenModal, openModal}) {
   // let [isOpen, setIsOpen] = useState(true)
@@ -43,13 +44,7 @@ export default function ModalComponent({modalText, setOpenModal, openModal}) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  {/* <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    {modalText}
-                  </Dialog.Title> */}
-                  
+                  <button className='md:ml-[23rem] ml-72' onClick={closeModal}> <RxCross1 className='text-xl text-slate-700 font-bold'/> </button>
                   <Form />
                 </Dialog.Panel>
               </Transition.Child>
