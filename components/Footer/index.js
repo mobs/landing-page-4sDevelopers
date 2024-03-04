@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { FaRegCopyright } from "react-icons/fa";
 
@@ -11,6 +12,7 @@ const Footer = () => {
         </p>
         
         <p className='m-16 mt-0 text-center mb-4 flex gap-4 items-center justify-center'>
+          <Link href='/privacyPolicy'> Privacy Policy </Link>
           <FaRegCopyright />
          Copyright 4S Developers {year} | Powered by BGD
         </p>

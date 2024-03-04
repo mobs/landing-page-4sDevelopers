@@ -184,7 +184,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="fixed bottom-0 md:hidden block z-40 w-full">
+      <div className="fixed bottom-0 md:hidden block z-40">
         <ConnectButton />
       </div>
     </div>

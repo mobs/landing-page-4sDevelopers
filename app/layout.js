@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <div className=""> {children} </div>
         <div className="fixed md:bottom-16 bottom-16 md:right-16 right-[2rem] flex flex-col gap-8 z-40">
         <Link href={`https://api.whatsapp.com/send?phone=918826677393`}>
-          <FaWhatsapp className="text-3xl text-green-700"/>
+          <FaWhatsapp className="text-6xl text-green-700"/>
         </Link>
         </div>
         <div>
