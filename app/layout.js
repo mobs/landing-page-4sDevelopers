@@ -22,11 +22,8 @@ export default function RootLayout({ children }) {
         <div className="w-screen bg-gray-50 z-50 h-24">
           <Navbar />
         </div>
-          <div className=""> {children} </div>
-        <div className="fixed md:bottom-16 bottom-[14rem] md:right-16 right-[2rem] flex flex-col gap-8 z-40">
-        <Link href={`tel:918826677393`}>
-          <FaPhone className="text-3xl text-blue-600" />
-        </Link>
+        <div className=""> {children} </div>
+        <div className="fixed md:bottom-16 bottom-16 md:right-16 right-[2rem] flex flex-col gap-8 z-40">
         <Link href={`https://api.whatsapp.com/send?phone=918826677393`}>
           <FaWhatsapp className="text-3xl text-green-700"/>
         </Link>

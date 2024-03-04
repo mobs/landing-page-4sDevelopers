@@ -7,7 +7,7 @@ const ConnectButton = () => {
     const [openModal, setOpenModal] = useState(false);
     
   return (
-    <div className='w-screen fixed bg-white z-40'>
+    <div className='w-screen fixed bottom-0 bg-white z-40'>
         <button className='z-40 w-1/2 bg-blue-gradient p-2 text-white font-bold text-lg'>
           <Link  href={`tel:918826677393`}> Call Now </Link>
         </button>
