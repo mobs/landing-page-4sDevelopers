@@ -10,6 +10,7 @@ import {
   locationAdvantages,
 } from "@/utils/constants";
 import ConnectButton from "../ConnectButton";
+import FloorPlan from "../FloorPlan";
 
 const LandingPage = () => {
   return (
@@ -25,10 +26,11 @@ const LandingPage = () => {
             At {companyAddress}{" "}
           </p>
           <div className="bg-white z-10 mt-8 md:text-2xl text-base font-semibold text-slate-700 p-4 rounded-bl-xl rounded-tr-xl w-3/4 lg:ml-0 ml-12">
-            <p> Starting Price @Rs. 3.99 Cr* Onwards </p>
-            <p> Super Area: 3395 sq.ft. </p>
-            <p> Carpet Area: 1855 sq. ft. </p>
-            <p> Balcony Area: 392 sq. ft. </p>
+            <p> Starting Price @Rs. 3.99 Cr* Onwards + PLC + GST </p>
+            <p> Area - 3 BHK: 2200-2500 sq.ft. + Servant </p>
+            <p> Area - 4 BHK: 3100-3400 sq.ft. + Servant </p> 
+            {/* <p> Carpet Area: 1855 sq. ft. </p> */}
+            {/* <p> Balcony Area: 392 sq. ft. </p> */}
           </div>
 
           <div className="lg:hidden w-3/4 mt-16 z-20 block lg:ml-0 ml-12 ">
@@ -106,11 +108,15 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div id="floor plan" className="flex flex-col">
+      <div id="floor plan" className="flex md:flex-row flex-col items-center justify-center lg:pl-24 lg:pr-24 pl-8 pr-8">
+        <FloorPlan />
+      </div>
+
+      {/* <div id="floor plan" className="flex flex-col">
         <div className="flex items-center justify-center">
           <img src="/4BHK.png" className="md:h-[40rem] md:w-[80%] w-[100%]" />
         </div>
-      </div>
+      </div> */}
 
       <div
         className="flex flex-col md:m-16 m-4 gap-8 text-center"

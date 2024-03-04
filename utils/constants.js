@@ -93,3 +93,16 @@ export const highlights = [
   "Landscape Elements Inspired by Singapore",
   "Comprehensive Security with CCTV Surveillance"
 ];
+
+export const tableData = [
+  {
+    type: '3 BHK',
+    area: '2200 - 2500 Sq.ft. + Servant',
+    number: '918826677393'
+  },
+  {
+    type: '4 BHK',
+    area: '3100 - 3400 Sq.ft. + Servant',
+    number: '918826677393'
+  },
+]
