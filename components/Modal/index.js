@@ -44,7 +44,7 @@ export default function ModalComponent({modalText, setOpenModal, openModal}) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <button className='md:ml-[23rem] ml-72' onClick={closeModal}> <RxCross1 className='text-xl text-slate-700 font-bold'/> </button>
+                  <button className='md:ml-[23rem] right-4' onClick={closeModal}> <RxCross1 className='text-xl text-slate-700 font-bold'/> </button>
                   <Form />
                 </Dialog.Panel>
               </Transition.Child>
