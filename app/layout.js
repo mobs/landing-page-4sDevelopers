@@ -3,7 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { FaPhone, FaWhatsapp } from "react-icons/fa";
+import Script from "next/script";
+import { FaWhatsapp } from "react-icons/fa";
 
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
@@ -16,7 +17,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel='icon' href='/logo.png' />
+        <link rel="icon" href="/logo.png" />
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WXMSLXFV')`,
+          }}
+        />
       </head>
       <body className={`${nunitoSans.className} overflow-x-hidden`}>
         <div className="w-screen bg-gray-50 z-50 h-24">
@@ -24,14 +35,21 @@ export default function RootLayout({ children }) {
         </div>
         <div className=""> {children} </div>
         <div className="fixed md:bottom-16 bottom-16 md:right-16 right-[2rem] flex flex-col gap-8 z-40">
-        <Link href={`https://api.whatsapp.com/send?phone=918826677393`}>
-          <FaWhatsapp className="text-6xl text-green-700"/>
-        </Link>
+          <Link href={`https://api.whatsapp.com/send?phone=918826677393`}>
+            <FaWhatsapp className="text-6xl text-green-700" />
+          </Link>
         </div>
         <div>
-          <Footer /> 
+          <Footer />
         </div>
-        </body>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXMSLXFV"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
+      </body>
     </html>
   );
 }
