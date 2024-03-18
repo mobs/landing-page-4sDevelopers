@@ -1,3 +1,5 @@
+import { GoogleTagManager } from '@next/third-parties/google';
+
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -18,16 +20,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WXMSLXFV')`,
-          }}
-        />
       </head>
       <body className={`${nunitoSans.className} overflow-x-hidden`}>
         <div className="w-screen bg-gray-50 z-50 h-24">
@@ -42,14 +34,8 @@ export default function RootLayout({ children }) {
         <div>
           <Footer />
         </div>
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXMSLXFV"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
       </body>
+      <GoogleTagManager gtmId="GTM-WXMSLXFV" />
     </html>
   );
 }
